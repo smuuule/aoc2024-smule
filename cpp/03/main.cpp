@@ -47,10 +47,8 @@ int main(int argc, char *argv[]) {
 
   std::vector<std::string> lines = readFile(file_string);
 
-  int res1 = partone(lines);
-  std::cout << "Part 1 Result: " << res1 << '\n';
-  int res2 = parttwo(lines);
-  std::cout << "Part 2 Result: " << res2 << '\n';
+  std::cout << "Part 1 Result: " << partone(lines) << '\n';
+  std::cout << "Part 2 Result: " << parttwo(lines) << '\n';
 
   return 0;
 }
