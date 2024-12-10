@@ -56,6 +56,15 @@ std::vector<long> toLongVector(std::string in, const std::string &sep) {
   }
   return out;
 }
+std::vector<unsigned long long> toULongLongVector(std::string in,
+                                                  const std::string &sep) {
+  std::vector<std::string> strVector = toStrVector(in, sep);
+  std::vector<unsigned long long> out;
+  for (std::string str : strVector) {
+    out.push_back(std::stoll(str));
+  }
+  return out;
+}
 
 std::vector<std::string> readFile(std::string file_string) {
   std::ifstream file(file_string);
